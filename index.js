@@ -29,6 +29,7 @@ const breakfastBurrito = {
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, cost, category){
+  //return itemCreated = {name,cost,category};
   var itemCreated = {
     nameOfItem:name,
     costOfItem:cost,
@@ -37,6 +38,7 @@ function createMenuItem(name, cost, category){
   return itemCreated;
 }
 console.log(createMenuItem("Pizza",7,"junk food"));
+
 /*function myFunction1(){
   return "Hello";
 }
@@ -79,9 +81,17 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 console.log(reviews[5].feedback); 
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
-reviews.push(name)
+var newObject = {
+  name:"Sebas",
+  rating:10,
+  feedback:"Pretty good."
+}
+reviews.push(newObject);
+console.log(reviews)
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
+
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
 console.log(reviews);
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
@@ -96,10 +106,10 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
 function getReviewByIndex(reviews, index) {
-    /* code here */
-  }
-  
-
+  return (reviews[index]);
+}
+  console.log(getReviewByIndex(reviews,[0]))
+  console.log(getReviewByIndex(reviews,[1]))
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
 getLastReview should accept:
